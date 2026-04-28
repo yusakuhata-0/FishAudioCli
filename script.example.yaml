@@ -1,0 +1,33 @@
+voice:
+  reference_id: ${FISH_REFERENCE_ID}
+
+model:
+  name: s2-pro
+  temperature: 0.25
+  top_p: 0.6
+  speed: 1.0
+  format: mp3
+  bitrate: 192k
+  condition_on_previous_chunks: false
+
+pause:
+  "、": 300
+  "。": 700
+  "！": 800
+  "？": 800
+  line_break: 1000
+  block: 1200
+
+output:
+  block_dir: dist/blocks
+  master_file: dist/master.mp3
+
+blocks:
+  - id: block_001
+    text: "こんにちは、今日は新しいサービスについてご紹介します。"
+
+  - id: block_002
+    text: "まず最初に、私たちが解決したい課題についてお話しします。"
+
+  - id: block_003
+    text: "それでは始めましょう。"

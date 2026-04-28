@@ -1,0 +1,22 @@
+{
+  "name": "fish-audio-story-generator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "npm run build --silent && node build/index.js",
+    "credit": "npm run build --silent && node build/credit.js",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build --silent && node --test build/**/*.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ffmpeg-static": "^5.2.0",
+    "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}

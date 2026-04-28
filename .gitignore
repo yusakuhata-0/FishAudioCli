@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+cache/
+dist/
+node_modules/
+build/
+*.log
+inbox/*
+!inbox/.gitkeep
+script.yaml
+script.*.yaml
+!script.example.yaml

@@ -1,0 +1,38 @@
+voice:
+  reference_id: ${FISH_REFERENCE_ID}
+
+model:
+  name: s2-pro
+  temperature: 0.25
+  top_p: 0.6
+  speed: 1.0
+  format: mp3
+  bitrate: 192k
+  condition_on_previous_chunks: false
+
+# Ochi model default:
+# Let Fish Audio handle natural punctuation pauses inside a sentence.
+# Use per-block pause_after only where the script/source explicitly marks a pause.
+pause:
+  "、": 0
+  "。": 0
+  "！": 0
+  "？": 0
+  line_break: 0
+  block: 750
+
+output:
+  block_dir: dist/blocks
+  master_file: dist/master.mp3
+
+blocks:
+  - id: block_001
+    text: "皆さんこんにちは、"
+    pause_after: 200
+
+  - id: block_002
+    text: "オチまさとです。"
+    pause_after: 750
+
+  - id: block_003
+    text: "ここに次のブロックを入れる。"
