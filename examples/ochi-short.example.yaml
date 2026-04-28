@@ -23,6 +23,8 @@ output:
   master_file: dist/examples/ochi-short/master.mp3
 
 blocks:
+  # Accepted Ochi intro timing:
+  # 0.20s after greeting, 0.75s after self-introduction.
   - id: block_001
     text: "皆さんこんにちは、"
     pause_after: 200

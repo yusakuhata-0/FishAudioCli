@@ -10,9 +10,16 @@ model:
   bitrate: 192k
   condition_on_previous_chunks: false
 
-# Ochi model default:
-# Let Fish Audio handle natural punctuation pauses inside a sentence.
-# Use per-block pause_after only where the script/source explicitly marks a pause.
+# Ochi model accepted defaults:
+# - Model: s2-pro
+# - temperature: 0.25
+# - top_p: 0.6
+# - speed: 1.0
+# - format: mp3 / 192k
+# - condition_on_previous_chunks: false
+# - Let Fish Audio handle natural punctuation pauses inside a sentence.
+# - Use per-block pause_after only where the script/source explicitly marks a pause.
+# - For the intro name, "オチまさとです。" was the best accepted phrasing.
 pause:
   "、": 0
   "。": 0
@@ -26,6 +33,8 @@ output:
   master_file: dist/master.mp3
 
 blocks:
+  # Accepted intro pattern:
+  # block_001 pause_after 200ms, block_002 pause_after 750ms.
   - id: block_001
     text: "皆さんこんにちは、"
     pause_after: 200
