@@ -93,3 +93,5 @@ If one phrase is bad:
 5. Rebuild `master.mp3`.
 
 For the intro name, 10-take testing found `オチまさとです。` to be better than spacing variants like `おち まさとです。`.
+
+When working fast, generate in block units, promote good blocks into the master, and do the final spacing trim in CapCut instead of overfitting pauses here.

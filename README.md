@@ -171,3 +171,4 @@ Key defaults:
 - Set punctuation pauses to `0` and let Fish Audio handle natural Japanese punctuation timing.
 - Treat explicit source pauses as block boundaries and encode them with `pause_after`.
 - Rewrite unstable readings in the text before generation, e.g. `25%` -> `二十五パーセント`, `YouTube` -> `ユーチューブ`.
+- Generate blocks in bulk, keep the good takes, merge them into `master.mp3` as you go, and leave final spacing adjustment to CapCut.
