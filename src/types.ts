@@ -13,6 +13,9 @@ export type ScriptConfig = {
     bitrate?: string;
     condition_on_previous_chunks: boolean;
     latency?: "normal" | "balanced";
+    chunk_length?: number;
+    normalize: boolean;
+    normalize_loudness: boolean;
   };
   pause: {
     "、": number;

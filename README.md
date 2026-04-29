@@ -113,6 +113,10 @@ has_free_credit: unknown
 - `speed`
 - `format`
 - `bitrate`
+- `latency`
+- `chunk_length`
+- `normalize`
+- `normalize_loudness`
 - `pause` 設定
 - `condition_on_previous_chunks`
 
@@ -167,6 +171,7 @@ For the Ochi Masato model, use [templates/ochi-model-script.yaml](templates/ochi
 Key defaults:
 
 - Use `オチまさとです。` for the self-introduction unless the user specifies otherwise.
+- Match the web generation settings: high-quality mode on (`latency: balanced`, `chunk_length: 300`), text normalization off (`normalize: false`), loudness normalization on (`normalize_loudness: true`).
 - Do not split inside a block by punctuation.
 - Set punctuation pauses to `0` and let Fish Audio handle natural Japanese punctuation timing.
 - Treat explicit source pauses as block boundaries and encode them with `pause_after`.

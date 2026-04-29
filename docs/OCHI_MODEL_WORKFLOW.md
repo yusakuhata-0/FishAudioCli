@@ -26,7 +26,17 @@ model:
   format: mp3
   bitrate: 192k
   condition_on_previous_chunks: false
+  latency: balanced
+  chunk_length: 300
+  normalize: false
+  normalize_loudness: true
 ```
+
+These mirror the current web-side defaults for this workflow:
+
+- high-quality mode on: `latency: balanced`, `chunk_length: 300`
+- text normalization off: `normalize: false`
+- loudness normalization on: `normalize_loudness: true`
 
 Accepted pause defaults:
 

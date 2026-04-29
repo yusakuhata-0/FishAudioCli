@@ -47,7 +47,10 @@ function makeConfig(): ScriptConfig {
       format: "mp3",
       bitrate: "192k",
       condition_on_previous_chunks: false,
-      latency: "normal",
+      latency: "balanced",
+      chunk_length: 300,
+      normalize: false,
+      normalize_loudness: true,
     },
     pause: {
       "、": 300,

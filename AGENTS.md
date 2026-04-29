@@ -19,6 +19,7 @@ When using the Ochi Masato voice model:
 - Use `オチまさとです。` for the self-introduction unless the user specifies otherwise.
 - Do not split inside a block by punctuation for this model.
 - Set punctuation pauses to `0` and let Fish Audio handle natural Japanese punctuation timing.
+- Match the web generation defaults: high-quality mode on (`latency: balanced`, `chunk_length: 300`), text normalization off (`normalize: false`), loudness normalization on (`normalize_loudness: true`).
 - Treat explicit visual/source pauses as block boundaries and encode them with `pause_after`.
 - For unnatural English or symbol readings, rewrite in Japanese phonetic form in `text`.
   - Example: `YouTube` -> `ユーチューブ`

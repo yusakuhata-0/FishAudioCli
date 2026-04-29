@@ -17,6 +17,10 @@ export function blockCacheKey(config: ScriptConfig, blockId: string, text: strin
     speed: config.model.speed,
     format: config.model.format,
     bitrate: config.model.bitrate,
+    latency: config.model.latency,
+    chunk_length: config.model.chunk_length,
+    normalize: config.model.normalize,
+    normalize_loudness: config.model.normalize_loudness,
     pause_settings: config.pause,
     condition_on_previous_chunks: config.model.condition_on_previous_chunks,
   });
@@ -34,6 +38,10 @@ export function segmentCacheKey(config: ScriptConfig, blockId: string, segmentIn
     speed: config.model.speed,
     format: config.model.format,
     bitrate: config.model.bitrate,
+    latency: config.model.latency,
+    chunk_length: config.model.chunk_length,
+    normalize: config.model.normalize,
+    normalize_loudness: config.model.normalize_loudness,
     condition_on_previous_chunks: config.model.condition_on_previous_chunks,
   });
 }

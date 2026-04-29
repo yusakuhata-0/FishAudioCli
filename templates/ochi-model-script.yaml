@@ -9,6 +9,10 @@ model:
   format: mp3
   bitrate: 192k
   condition_on_previous_chunks: false
+  latency: balanced
+  chunk_length: 300
+  normalize: false
+  normalize_loudness: true
 
 # Ochi model accepted defaults:
 # - Model: s2-pro
@@ -17,6 +21,9 @@ model:
 # - speed: 1.0
 # - format: mp3 / 192k
 # - condition_on_previous_chunks: false
+# - high-quality equivalent: latency balanced, chunk_length 300
+# - text normalization: off
+# - loudness normalization: on
 # - Let Fish Audio handle natural punctuation pauses inside a sentence.
 # - Use per-block pause_after only where the script/source explicitly marks a pause.
 # - For the intro name, "オチまさとです。" was the best accepted phrasing.

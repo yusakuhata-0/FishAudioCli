@@ -37,7 +37,10 @@ function normalizeConfig(config: Partial<ScriptConfig>, scriptPath: string): Scr
       format: config.model?.format ?? "mp3",
       bitrate: config.model?.bitrate ?? "192k",
       condition_on_previous_chunks: config.model?.condition_on_previous_chunks ?? false,
-      latency: config.model?.latency ?? "normal",
+      latency: config.model?.latency ?? "balanced",
+      chunk_length: config.model?.chunk_length ?? 300,
+      normalize: config.model?.normalize ?? false,
+      normalize_loudness: config.model?.normalize_loudness ?? true,
     },
     pause: {
       "、": config.pause?.["、"] ?? 300,

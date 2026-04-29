@@ -16,6 +16,10 @@ model:
   format: mp3
   bitrate: 192k
   condition_on_previous_chunks: false
+  latency: balanced
+  chunk_length: 300
+  normalize: false
+  normalize_loudness: true
 
 pause:
   "、": 0
@@ -46,3 +50,13 @@ Use it when a storyboard or source image explicitly says the pause should be dif
 Set punctuation pauses to `0` when you want Fish Audio to handle punctuation naturally inside the generated block.
 
 Use punctuation pauses above `0` only when you intentionally want the CLI to split at that punctuation and insert exact silence.
+
+## Generation Quality / Normalization
+
+Current default generation settings match the web workflow used for the Ochi model:
+
+- high-quality mode on: `latency: balanced`, `chunk_length: 300`
+- text normalization off: `normalize: false`
+- loudness normalization on: `normalize_loudness: true`
+
+With `normalize: false`, write readings directly into the script text when needed, for example `25%` -> `二十五パーセント` or `YouTube` -> `ユーチューブ`.
