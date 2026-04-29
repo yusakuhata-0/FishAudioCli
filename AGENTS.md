@@ -24,6 +24,8 @@ When using the Ochi Masato voice model:
 - For unnatural English or symbol readings, rewrite in Japanese phonetic form in `text`.
   - Example: `YouTube` -> `ユーチューブ`
   - Example: `25%` -> `二十五パーセント`
+- If the user provides a polished/final script, do not rewrite wording, kanji/kana, numbers, symbols, or readings without asking first.
+- Put user-facing review outputs in shallow Japanese-named folders under `音声確認/` when practical.
 
 ## Generation Workflow
 
@@ -32,10 +34,10 @@ When using the Ochi Masato voice model:
 3. Run `npm run generate -- script.yaml --dry-run`.
 4. If the estimate is acceptable, run `npm run generate -- script.yaml --yes`.
 5. For quality fixes, regenerate only affected blocks with `--only block_id`.
-6. If testing multiple takes for one phrase, write preview scripts under local ignored `script.*.yaml` and output under `dist/previews/`.
+6. If testing multiple takes for one phrase, write preview scripts under local ignored `script.*.yaml` and put user-facing takes under `音声確認/`.
 
 ## Shareable Files
 
 Commit source code, docs, templates, examples, `.env.example`, and `inbox/.gitkeep`.
 
-Do not commit local `.env`, `script.yaml`, `script.*.yaml`, `inbox/*`, `cache/`, `dist/`, `build/`, or `node_modules/`.
+Do not commit local `.env`, `script.yaml`, `script.*.yaml`, `inbox/*`, `音声確認/`, `cache/`, `dist/`, `build/`, or `node_modules/`.

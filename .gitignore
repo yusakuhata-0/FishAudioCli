@@ -3,6 +3,7 @@
 !.env.example
 cache/
 dist/
+音声確認/
 node_modules/
 build/
 *.log

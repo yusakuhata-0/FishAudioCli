@@ -26,6 +26,7 @@ Do not commit:
 - `script.yaml`
 - `script.*.yaml`
 - `inbox/*` except `inbox/.gitkeep`
+- `音声確認/`
 - `cache/`
 - `dist/`
 - `build/`

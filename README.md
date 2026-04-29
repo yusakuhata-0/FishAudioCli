@@ -10,6 +10,7 @@ templates/ Shareable script templates
 examples/  Safe example scripts
 docs/      Usage and sharing docs
 inbox/     Local source drop folder; contents are ignored
+音声確認/  User-facing local review outputs; ignored
 cache/     Local generated cache; ignored
 dist/      Local output audio; ignored
 ```

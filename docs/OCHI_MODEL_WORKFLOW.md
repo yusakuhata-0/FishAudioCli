@@ -105,3 +105,11 @@ If one phrase is bad:
 For the intro name, 10-take testing found `オチまさとです。` to be better than spacing variants like `おち まさとです。`.
 
 When working fast, generate in block units, promote good blocks into the master, and do the final spacing trim in CapCut instead of overfitting pauses here.
+
+For files the user needs to listen to directly, prefer shallow Japanese-named folders under `音声確認/`, for example:
+
+```text
+音声確認/おちさんセクション2_全文そのまま/確認用/001.mp3
+```
+
+Do not rewrite a polished script's wording, kanji/kana, numbers, symbols, or readings without asking. If a pronunciation fix is needed, treat that as a separate confirmation before changing the text.
